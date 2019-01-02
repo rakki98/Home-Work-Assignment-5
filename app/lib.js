@@ -58,8 +58,9 @@ lib.validatePassword=function(password){
   var upperCase= lib.uppercase(password);
   var lowerCase=lib.lowercase(password);
   var specialCharacters=lib.specialCharacters(password);
+  var passwordLength=password.trim().length>8 ? 1:0;
   
-  if(upperCase && lowerCase  && specialCharacters)
+  if(upperCase && lowerCase  && specialCharacters && passwordLength)
   {
       return true;
   }
